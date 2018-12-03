@@ -3,12 +3,9 @@ import { AuthService } from '../services/auth.service';
 import { Router, NavigationCancel, ActivatedRoute, Params } from '@angular/router';
 import { URLSearchParams } from '@angular/http';
 import { Http, RequestOptions, Headers, Response} from '@angular/http';
-<<<<<<< HEAD
 import * as qs from 'querystring';
 import * as _ from 'lodash';
-=======
 import { map } from 'rxjs/operators';
->>>>>>> 2395159c777267b597759ee00efbc197d83a1f7b
 
 @Component({
   selector: 'app-auth-callback',
@@ -21,30 +18,18 @@ import { map } from 'rxjs/operators';
 
 export class AuthCallbackComponent implements OnInit {
   public accesstoken:any;
-<<<<<<< HEAD
+
 
   constructor(private http: Http, public router: Router, private authService: AuthService, private activatedRoute: ActivatedRoute) {
    }
 
-  ngOnInit() {
-    this.authService.completeAuthentication();
-    const params = qs.parse(window.location.search.substring(1));
-    this.activatedRoute.fragment.subscribe((fragment: string) => {
-      new URLSearchParams(fragment).get('access_token');
-      const response = _.fromPairs(Array.from(new URLSearchParams(fragment)));
-      console.log(response.access_token);
-
-    })
-=======
   response: string;
-  public rknresponse:any;
+  public rknresponse: any;
   public rkninvoice:any;
   arrBirds: string [];
   aarBirds2:any;
   public book:any;
-  constructor(private http: Http, public router: Router, private authService: AuthService) {
-
-   }
+ 
 
   ngOnInit() {
     this.authService.completeAuthentication().then(t => {
@@ -57,7 +42,6 @@ export class AuthCallbackComponent implements OnInit {
     this.getData();
     //this.getData2();
     });
->>>>>>> 2395159c777267b597759ee00efbc197d83a1f7b
   }
 
   getData() {
