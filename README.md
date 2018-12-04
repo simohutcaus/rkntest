@@ -20,7 +20,7 @@ Once the depedencies are installed you will need to edit the auth.service.ts fil
 
 ## Authors
 
-* **Simon Hutchinson** - *Initial work* - [PurpleBooth](https://github.com/simohutcaus)
+* **Simon Hutchinson** - *Initial work* - [simohutcaus](https://github.com/simohutcaus)
 
 ## License
 
